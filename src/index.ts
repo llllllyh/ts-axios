@@ -1,0 +1,8 @@
+/**
+ * 项目入口
+ */
+import { AxiosRequestConfig } from './types' 
+import xhr from './xhr'
+export default function axios(config: AxiosRequestConfig) {
+    xhr(config)
+}
