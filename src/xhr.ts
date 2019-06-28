@@ -1,12 +1,11 @@
 import { AxiosRequestConfig } from './types'
 
 export default function xhr(config: AxiosRequestConfig): void {
-    const { data = null, url, methods = 'get' } = config
+  const { data = null, url, method = 'get' } = config
 
-    const request = new XMLHttpRequest()
+  const request = new XMLHttpRequest()
 
-    request.open(methods.toUpperCase(), url, true)
+  request.open(method.toUpperCase(), url, true)
 
-    request.send(data)
-
+  request.send(data)
 }
